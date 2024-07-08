@@ -1,29 +1,25 @@
 import React from 'react';
-import './LoginForm.css'
+import './register.css'
 import { FaUser, FaLock } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-const LoginForm = () => {
+const Register = () => {
   return (
     <div className = 'wrapper'>
         <form action="">
-            <h1>로그인</h1>
+            <h1>함께하기</h1>
                 <div className='input-box'>
-                    <input type="text" placeholder='아이디' required />
+                    <input type="Email" placeholder='이메일' required />
                     <FaUser className='icon'/>
                 </div>
                 <div className='input-box'>
                     <input type="password" placeholder='비밀번호' required />
                     <FaLock className='icon'/>
                 </div>
-                <div className="remember-forgot">
-                    <label><input type="checkbox" />계정 기억하기</label>
-                    <a href="#">비밀번호를 잊으셨나요?</a>
-                </div>
-                <button type='submit'>Login</button>
+                <button type='submit'>가입하기</button>
 
                 <div className="register-link">
-                    <p>아직 계정이 없으신가요? <Link to="/register">가입하기</Link> </p>
+                    <p>이미 계정이 있으신가요? <Link to="/">돌아가기</Link> </p>
                 </div>
         </form>
 
@@ -31,4 +27,4 @@ const LoginForm = () => {
   );
 }
 
-export default LoginForm;
+export default Register;
